@@ -1,33 +1,46 @@
-<!doctype HTML>
+<?doctype HTML>
 <html lang="en">
 <head>
 <title> My Page </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head>
 <body>
-	<div>
-		STATESMAN
-	</div>
-	<div>
-		Match. Battle. Learn.
-	</div>
-	<div>
-		Become a true Statesman.
-	</div>
-	<div class="container">
-		<button type="button" class="btn btn-primary btn-lg active">Random Match</button>
-	</div>
-	<div class="container">
-		<button type="button" class="btn btn-primary btn-lg active">Challenge Friends</button>
-	</div>
-	<div class="container">
-		<button type="button" class="btn btn-primary btn-lg active">Your Profile</button>
-	</div>
-	<div class="container">
-		<button type="button" class="btn btn-primary btn-lg active">High Scores</button>
+	 <div data-role="page">
+
+        <div data-role="header">
+            <h1>Statesman</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+        	<h2 style="text-align: center">Match. Battle. Learn.</h>
+            <h3 style="text-align: center">Become a true Statesman.</h4>
+        </div><!-- /content -->
+		<div id="container">
+			<div class="button">
+				<button type="button" class="btn btn-primary btn-lg active" onclick="window.location.href = 's-name.html'">
+					<h2>Random Match</h2>
+				</button>
+			</div>
+			<div class="button">
+				<button type="button" class="btn btn-primary btn-lg active">
+					<h2>Challenge Friends</h2>
+				</button>
+			</div>
+			<div class="button">
+				<button type="button" class="btn btn-primary btn-lg active">
+					<h2>Your Profile</h2>
+				</button>
+			</div>
+			<div class="button">
+				<button type="button" class="btn btn-primary btn-lg active">
+					<h2>High Scores</h2>
+				</button>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
