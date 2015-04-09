@@ -1,0 +1,13 @@
+p {
+	text-align: center;
+	font-family: "Rockwell";
+}
+
+div {
+	line-height: 30px;
+}
+
+button {
+	padding: 5px;
+	height: 500px;
+}
