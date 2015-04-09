@@ -1,6 +1,13 @@
-.ui-btn {
-  height: 30%;
+.ui-btn-text {
   font-size: 24px;
+}
+
+.ui-btn-corner-all {
+  height: 40%;
+}
+
+.ui-btn-up-c {
+  height: 40%;
 }
 
 #question {
