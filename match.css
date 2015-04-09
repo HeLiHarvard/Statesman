@@ -1,0 +1,21 @@
+.ui-btn {
+  height: 30%;
+  font-size: 24px;
+}
+
+#question {
+  text-align: center;
+  font-size: 140%;
+  height: 75px;
+  width: 90%;
+}
+
+#header {
+  font-size: 20px;
+}
+
+#next {
+  height: 50px;
+  width: 50%;
+  margin: 0 auto;
+}
