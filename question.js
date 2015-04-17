@@ -11,12 +11,14 @@ $(document).ready(function() {
     sessionStorage.setItem("points", 0);
   }
 
+  /*
   window.setTimeout(function() {
     var points = JSON.parse(sessionStorage.getItem("points"));
     points -= 1;
     sessionStorage.setItem("points", JSON.stringify(points));
     window.location.href = "timeout.html" + q_n;
   }, TIMER);
+  */
 
   function getOpponentTime(min, max) {
     return Math.random()*(max - min) + min;
