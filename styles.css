@@ -10,4 +10,11 @@ div {
 button {
 	padding: 5px;
 	height: 500px;
+<<<<<<< HEAD
+=======
+}
+
+video {
+  image-fit: fill;
+>>>>>>> ben
 }
