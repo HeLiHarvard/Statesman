@@ -3,6 +3,8 @@ $(document).ready(function() {
       OPP_MIN_TIME = 7000,
       OPP_MAX_TIME = 20000,
       NUM_QUESTIONS = $("a").length,
+      url = window.location.pathname,
+      q_n = url.charAt(url.length-6);
       start = new Date().getTime();
 
   if (!sessionStorage.getItem("points")) {
@@ -10,7 +12,10 @@ $(document).ready(function() {
   }
 
   window.setTimeout(function() {
-    window.location.href = "timeout.html";
+    var points = JSON.parse(sessionStorage.getItem("points"));
+    points -= 1;
+    sessionStorage.setItem("points", JSON.stringify(points));
+    window.location.href = "timeout.html" + q_n;
   }, TIMER);
 
   function getOpponentTime(min, max) {
@@ -42,7 +47,7 @@ $(document).ready(function() {
     }
 
     sessionStorage.setItem("points", JSON.stringify(points));
-    window.location.href = "correct.html";
+    window.location.href = "correct.html" + q_n;
 
   });
 
@@ -59,7 +64,7 @@ $(document).ready(function() {
 
     sessionStorage.setItem("points", points);
     sessionStorage.setItem("points", JSON.stringify(points));
-    window.location.href = "incorrect.html";
+    window.location.href = "incorrect.html" + q_n;
 
   });
 
