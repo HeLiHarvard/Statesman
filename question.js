@@ -49,7 +49,7 @@ $(document).ready(function() {
     }
 
     sessionStorage.setItem("points", JSON.stringify(points));
-    window.location.href = "correct.html" + q_n;
+    window.location.href = "correct" + q_n + ".html";
 
   });
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
     sessionStorage.setItem("points", points);
     sessionStorage.setItem("points", JSON.stringify(points));
-    window.location.href = "incorrect.html" + q_n;
+    window.location.href = "incorrect" + q_n + ".html";
 
   });
 
