@@ -1,3 +1,3 @@
 function immigEnded() {
-  window.location.href = "question.html"
+  window.location.href = "question1.html"
 }
