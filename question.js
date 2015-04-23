@@ -2,14 +2,19 @@ $(document).ready(function() {
   var TIMER = 21000,
       OPP_MIN_TIME = 7000,
       OPP_MAX_TIME = 20000,
+      OPP_CORRECT_RATE = 2,
       NUM_QUESTIONS = $("a").length,
       url = window.location.pathname,
       q_n = url.charAt(url.length-6);
       start = new Date().getTime();
 
-  if (!sessionStorage.getItem("points")) {
-    sessionStorage.setItem("points", 0);
+  if (q_n == 1) {
+    sessionStorage.setItem("your_points", 0);
+    sessionStorage.setItem("opp_points", 0);
   }
+
+  console.log("yours: " + sessionStorage.getItem("your_points"));
+  console.log("opp: " + sessionStorage.getItem("opp_points"));
 
   /*
   window.setTimeout(function() {
@@ -25,9 +30,12 @@ $(document).ready(function() {
   }
 
   function oppCorrect(numQ) {
-    if (Math.random()*(numQ-1) + 1 == 1){
+    var c = Math.floor(Math.random() * numQ) + 1;
+    if (c <= OPP_CORRECT_RATE){
+      alert("opp correct");
       return true;
     } else {
+      alert("opp incorrect");
       return false;
     }
   }
@@ -37,35 +45,43 @@ $(document).ready(function() {
         user_time = end - start,
         opp_time = getOpponentTime(OPP_MIN_TIME, OPP_MAX_TIME),
         opp_correct = oppCorrect(NUM_QUESTIONS),
-        points = JSON.parse(sessionStorage.getItem("points"));
+        your_points = JSON.parse(sessionStorage.getItem("your_points")),
+        opp_points = JSON.parse(sessionStorage.getItem("opp_points"));
 
     if (opp_correct) {
       if (user_time <= opp_time)
-        points += 1;
+        your_points += 1;
       else
-        points -= 1;
+        opp_points += 1;
     } else {
-      points += 1;
+      your_points += 1;
     }
 
-    sessionStorage.setItem("points", JSON.stringify(points));
+    sessionStorage.setItem("your_points", JSON.stringify(your_points));
+    sessionStorage.setItem("opp_points", JSON.stringify(opp_points));
+    console.log("yours: " + sessionStorage.getItem("your_points"));
+    console.log("opp: " + sessionStorage.getItem("opp_points"));
     window.location.href = "correct" + q_n + ".html";
 
   });
 
   $(".incorrect").click(function() {
+    alert("INCORRECT!");
     var end = new Date().getTime(),
         user_time = end - start,
         opp_time = getOpponentTime(OPP_MIN_TIME, OPP_MAX_TIME),
         opp_correct = oppCorrect(NUM_QUESTIONS),
-        points = JSON.parse(sessionStorage.getItem("points"));
+        your_points = JSON.parse(sessionStorage.getItem("your_points")),
+        opp_points = JSON.parse(sessionStorage.getItem("opp_points"));
 
     if (opp_correct) {
-      points -= 1;
+      opp_points += 1;
     }
 
-    sessionStorage.setItem("points", points);
-    sessionStorage.setItem("points", JSON.stringify(points));
+    sessionStorage.setItem("your_points", JSON.stringify(your_points));
+    sessionStorage.setItem("opp_points", JSON.stringify(opp_points));
+    console.log("yours: " + sessionStorage.getItem("your_points"));
+    console.log("opp: " + sessionStorage.getItem("opp_points"));
     window.location.href = "incorrect" + q_n + ".html";
 
   });
