@@ -10,10 +10,20 @@
   <script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
   <script src="scripts.js"></script>  
 </head>
+<body>
+  <div data-role="page"  style="background-image: url('background.gif'); background-size: 100%; background-color: #2d2531; opacity: 50%">
+    <div data-role="header">
+        <h1>Statesman</h1>
+    </div><!-- /header -->
+    <div data-role="content">
+      <h1 style="text-align: center; color:white;">Introduction</h1>
 
-<video width="426" height="240" controls onended="immigEnded()">
-  <source src='immigration.mp4' type="video/mp4">
-  <source src="immigration.ogg" type="video/ogg">
-Your browser does not support the video tag. 
-</video>
+        <video width="426" height="240" style="position:fixed; top:25%"  controls onended="immigEnded()">
+          <source src='immigration.mp4' type="video/mp4">
+          <source src="immigration.ogg" type="video/ogg">
+        Your browser does not support the video tag. 
+        </video>
+    </div>
+  </div>
+</body>
 </html>
