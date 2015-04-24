@@ -2,8 +2,8 @@ $(document).ready(function() {
   var TIMER = 21000,
       OPP_MIN_TIME = 7000,
       OPP_MAX_TIME = 20000,
-      OPP_CORRECT_RATE = 2,
       NUM_QUESTIONS = $("a").length,
+      OPP_CORRECT_RATE = 2, // out of number of questions
       url = window.location.pathname,
       q_n = url.charAt(url.length-6);
       start = new Date().getTime();
@@ -31,13 +31,7 @@ $(document).ready(function() {
 
   function oppCorrect(numQ) {
     var c = Math.floor(Math.random() * numQ) + 1;
-    if (c <= OPP_CORRECT_RATE){
-      alert("opp correct");
-      return true;
-    } else {
-      alert("opp incorrect");
-      return false;
-    }
+    return c <= OPP_CORRECT_RATE;
   }
 
   $(".correct").click(function() {
@@ -66,7 +60,6 @@ $(document).ready(function() {
   });
 
   $(".incorrect").click(function() {
-    alert("INCORRECT!");
     var end = new Date().getTime(),
         user_time = end - start,
         opp_time = getOpponentTime(OPP_MIN_TIME, OPP_MAX_TIME),

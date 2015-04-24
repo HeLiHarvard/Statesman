@@ -27,3 +27,21 @@ img.displayed {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+table {
+	width: 100%;
+}
+td {
+  vertical-align: top;
+}
+.d1 {
+  text-align: left;
+}
+.d2 {
+  text-align:center;
+}
+.d3 {
+  text-align:right;
+}
+
+
