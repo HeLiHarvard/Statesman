@@ -36,12 +36,16 @@ td {
 }
 .d1 {
   text-align: left;
+  color: white;
 }
+
 .d2 {
   text-align:center;
+  color: white;
 }
 .d3 {
   text-align:right;
+  color: white;
 }
 
 
