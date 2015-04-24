@@ -14,8 +14,8 @@ $(document).ready(function() {
     sessionStorage.setItem("opp_points", 0);
   }
 
-  console.log("yours: " + sessionStorage.getItem("your_points"));
-  console.log("opp: " + sessionStorage.getItem("opp_points"));
+  //console.log("yours: " + sessionStorage.getItem("your_points"));
+  //console.log("opp: " + sessionStorage.getItem("opp_points"));
 
   var y_pts = "You: " + sessionStorage.getItem("your_points"),
       o_pts = "Tom: " + sessionStorage.getItem("opp_points");
