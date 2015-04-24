@@ -14,18 +14,19 @@
 <body>
   <div data-role="page">
     <div data-role="header">
+      <a href="defeat.html" data-role="button" id="forfeit" data-ajax="false">Forfeit</a>
       <h1 id="header">Statesman</h1>
     </div>
 
     <div data-role="content">
       <table>
-	<tr>
-	  <td class="d1">
-	    <h2>You: 0</h2>
-	  </td>
-	  <td class="d2"><h2>Match!</h2></td>
-	  <td class="d3"><h2>Tom: 0</h2></div></td>
-	</tr>
+        <tr>
+          <td class="d1">
+            <h2 id="you"></h2>
+          </td>
+          <td class="d2"><h2>Match!</h2></td>
+          <td class="d3"><h2 id="tom"></h2></div></td>
+        </tr>
       </table>
       <div class="ui-grid-solo">
         <div class="ui-bar ui-bar-c" id="question"> How many undocumented immigrants live in the United States today?</div>

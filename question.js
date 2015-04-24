@@ -1,20 +1,27 @@
 $(document).ready(function() {
   var TIMER = 21000,
-      OPP_MIN_TIME = 7000,
-      OPP_MAX_TIME = 20000,
+      OPP_MIN_TIME = 6000,
+      OPP_MAX_TIME = 15000,
       NUM_QUESTIONS = $("a").length,
       OPP_CORRECT_RATE = 2, // out of number of questions
       url = window.location.pathname,
-      q_n = url.charAt(url.length-6);
+      q_n = url.charAt(url.length-6),
+      type = url.charAt(url.length-7), // == 'n' if question[q_n].html, 't' if [in]correct[q_n].html
       start = new Date().getTime();
 
-  if (q_n == 1) {
+  if (q_n == 1 && type == 'n') {
     sessionStorage.setItem("your_points", 0);
     sessionStorage.setItem("opp_points", 0);
   }
 
   console.log("yours: " + sessionStorage.getItem("your_points"));
   console.log("opp: " + sessionStorage.getItem("opp_points"));
+
+  var y_pts = "You: " + sessionStorage.getItem("your_points"),
+      o_pts = "Tom: " + sessionStorage.getItem("opp_points");
+
+  $("#you").text(y_pts);
+  $("#tom").text(o_pts);
 
   /*
   window.setTimeout(function() {
@@ -76,6 +83,18 @@ $(document).ready(function() {
     console.log("yours: " + sessionStorage.getItem("your_points"));
     console.log("opp: " + sessionStorage.getItem("opp_points"));
     window.location.href = "incorrect" + q_n + ".html";
+
+  });
+
+  $("#finish").click(function() {
+    var your_points = JSON.parse(sessionStorage.getItem("your_points")),
+        opp_points = JSON.parse(sessionStorage.getItem("opp_points"));
+
+    if (your_points >= opp_points) {
+      window.location.href = "victory.html";
+    } else {
+      window.location.href = "defeat.html";
+    }
 
   });
 
