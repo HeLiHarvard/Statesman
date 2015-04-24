@@ -8,15 +8,24 @@
   <link rel="stylesheet" href="match.css">
   <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+  <script src="question.js"></script>
 </head>
-<body style="background-image: url('Launch.gif'); background-size: 100%; background-color: #2d2531; opacity: 50%">
-  <div data-role="page">
+<body>
+  <div data-role="page"  style="background-image: url('background.gif'); background-size: 100%; background-color: #2d2531; opacity: 50%">
     <div data-role="header">
       <h1 id="header">Statesman</h1>
     </div>
 
     <div data-role="content">
-      <h1 style="text-align: center">Your opponent: Tom</h1>
+      <table>
+        <tr>
+          <td class="d1">
+            <h2 id="you"></h2>
+          </td>
+          <td class="d2"><h2>Match!</h2></td>
+          <td class="d3"><h2 id="tom"></h2></div></td>
+        </tr>
+      </table>
       <div class="ui-grid-solo">
         <div class="ui-bar ui-bar-c" id="question"> <i> Did you know? </i> <br>
         Unauthorized immigrants will be background checked. They are ineligible if they have a felony or more than two misdemeanors. </div>
