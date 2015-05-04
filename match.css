@@ -1,9 +1,14 @@
 .ui-btn-text {
   font-size: 14px;
+  transform: translateY(50%);
 }
 
 .ui-btn-up-c {
   height: 40%;
+}
+
+.ui-link-inherit {
+  text-decoration:none;
 }
 
 #question {
