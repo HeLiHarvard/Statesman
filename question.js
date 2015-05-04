@@ -47,13 +47,15 @@ $(document).ready(function() {
         opp_time = getOpponentTime(OPP_MIN_TIME, OPP_MAX_TIME),
         opp_correct = oppCorrect(NUM_QUESTIONS),
         your_points = JSON.parse(sessionStorage.getItem("your_points")),
-        opp_points = JSON.parse(sessionStorage.getItem("opp_points"));
+        opp_points = JSON.parse(sessionStorage.getItem("opp_points")),
+        next_page = "correct" + q_n + ".html";
 
     if (opp_correct) {
       if (user_time <= opp_time)
         your_points += 1;
       else
         opp_points += 1;
+        next_page = "tooslow" + q_n + ".html";
     } else {
       your_points += 1;
     }
@@ -62,7 +64,7 @@ $(document).ready(function() {
     sessionStorage.setItem("opp_points", JSON.stringify(opp_points));
     console.log("yours: " + sessionStorage.getItem("your_points"));
     console.log("opp: " + sessionStorage.getItem("opp_points"));
-    window.location.href = "correct" + q_n + ".html";
+    window.location.href = next_page;
 
   });
 
