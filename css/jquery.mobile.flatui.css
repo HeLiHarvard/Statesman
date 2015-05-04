@@ -4141,7 +4141,7 @@ html .ui-bar-c{border-width:1px;border-style:solid}
 html .ui-overlay-c,html .ui-page-theme-c,html .ui-page-theme-c .ui-panel-wrapper{background:#f9f9f9;border-color:#bbb;color:#333}
 html .ui-body-c,html .ui-page-theme-c .ui-body-inherit,html .ui-bar-c .ui-body-inherit,html .ui-body-c .ui-body-inherit,html body .ui-group-theme-c .ui-body-inherit,html .ui-panel-page-container-c{background:#fff;border-color:#f2f2f2;color:#333}
 html .ui-body-c{border-width:1px;border-style:solid}
-html .ui-page-theme-c a,html .ui-bar-c a,html .ui-body-c a,html body .ui-group-theme-c a{color:#eee;font-weight:bold}
+html .ui-page-theme-c a,html .ui-bar-c a,html .ui-body-c a,html body .ui-group-theme-c a{color:black;font-weight:bold}
 html .ui-page-theme-c a:visited,html .ui-bar-c a:visited,html .ui-body-c a:visited,html body .ui-group-theme-c a:visited{color:black}
 html .ui-page-theme-c a:hover,html .ui-bar-c a:hover,html .ui-body-c a:hover,html body .ui-group-theme-c a:hover{color:#eee}
 html .ui-page-theme-c a:active,html .ui-bar-c a:active,html .ui-body-c a:active,html body .ui-group-theme-c a:active{color:#eee}

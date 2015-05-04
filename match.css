@@ -1,6 +1,7 @@
 .ui-btn-text {
   font-size: 14px;
   transform: translateY(50%);
+  color: black;
 }
 
 .ui-btn-up-c {
