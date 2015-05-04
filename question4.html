@@ -30,14 +30,41 @@
         </tr>
       </table>
       <div class="ui-grid-solo">
-        <div class="ui-bar ui-bar-c" id="question">Who would be eligible for the program?</div>
+        <div class="ui-bar ui-bar-c" id="question">Who would be ineligible for the program? Check all that apply.</div>
       </div>
     </div>
 
-      <a href="#"  class="incorrect" data-role="button" data-ajax="false"><h3>A person who illegally immigrated within the past five years.</h3></a>
-      <a href="#"  class="incorrect" data-role="button" data-ajax="false"><h3>A person with a felony conviction.</h3></a>
-      <a href="#" class="correct" data-role="button" data-ajax="false"><h3>A person who is not of working age or overstayed their green card period.</h3></a>
-      <a href="#" class="incorrect" data-role="button" data-ajax="false"><h3>A person with 3 misdemeanor convictions.</h3></a>
+    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><fieldset data-role="controlgroup" class="ui-corner-all ui-controlgroup ui-controlgroup-vertical"><div class="ui-controlgroup-controls">
+          
+          <div class="ui-checkbox"><input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom"><label for="checkbox-1a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" class="ui-btn ui-btn-icon-left ui-corner-top">A person who illegally immigrated within the past five years</span></label></div>
+          
+
+          <div class="ui-checkbox"><input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom"><label for="checkbox-2a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" class="ui-btn ui-btn-icon-left ui-corner-top">A person with a felony conviction or three misdemeanors</span></label></div>
+          
+          
+          <div class="ui-checkbox"><input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom"><label for="checkbox-3a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" class="ui-btn ui-btn-icon-left ui-corner-top">A person who is not of working age</span></label></div>
+          
+
+          <div class="ui-checkbox"><input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom"><label for="checkbox-4a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" class="ui-btn ui-btn-icon-left ui-corner-top">A person who overstayed their green card period</span></label></div>
+          
+      </div></fieldset></div>
+      <!-- SUBMIT BUTTON calls JS fun -->
+      <script>
+      function submit() {
+        if (
+          (document.getElementById("checkbox-1a").checked == true) && 
+          (document.getElementById("checkbox-2a").checked == true) && 
+          (document.getElementById("checkbox-3a").checked == false) && 
+          (document.getElementById("checkbox-4a").checked == false)) 
+        {
+          window.location.href = 'correct4.html';
+        } else {
+          window.location.href = 'incorrect4.html';
+        }
+      };
+      </script>
+
+      <a class="btn btn-block btn-lg btn-primary" data-role="button" data-ajax="false" onclick="submit()"><h1>Submit</h1></a>
 
   </div>
 
