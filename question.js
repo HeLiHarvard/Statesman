@@ -53,9 +53,10 @@ $(document).ready(function() {
     if (opp_correct) {
       if (user_time <= opp_time)
         your_points += 1;
-      else
+      else {
         opp_points += 1;
         next_page = "tooslow" + q_n + ".html";
+      }
     } else {
       your_points += 1;
     }
