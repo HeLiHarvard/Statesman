@@ -49,6 +49,23 @@
           <div class="ui-checkbox"><input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom"><label for="checkbox-4a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" class="ui-btn ui-btn-icon-left ui-corner-top">$46-billion worth of improvements</span></label></div>
           
       </div></fieldset></div>
+      <!-- SUBMIT BUTTON calls JS fun -->
+      <script>
+      function submit() {
+        if (
+          (document.getElementById("checkbox-1a").checked == true) && 
+          (document.getElementById("checkbox-2a").checked == true) && 
+          (document.getElementById("checkbox-3a").checked == true) && 
+          (document.getElementById("checkbox-4a").checked == true)) 
+        {
+          window.location.href = 'correct5.html';
+        } else {
+          window.location.href = 'incorrect5.html';
+        }
+      };
+      </script>
+
+      <a class="btn btn-block btn-lg btn-primary" data-role="button" data-ajax="false" onclick="submit()"><h1>Submit</h1></a>
   </div>
 
 </body>
