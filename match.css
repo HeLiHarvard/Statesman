@@ -22,6 +22,12 @@
   margin: 0 auto;
 }
 
+#finish {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
 img.displayed {
 	display: block;
 	margin-left: auto;
